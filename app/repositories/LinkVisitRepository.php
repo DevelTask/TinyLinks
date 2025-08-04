@@ -19,7 +19,7 @@ class LinkVisitRepository
     public function save(LinkVisit $visit): void
     {
         if (!$visit->save()) {
-            throw new \RuntimeException('Ошибка при сохранении визита: ' . json_encode($visit->getErrors()));
+            throw new \RuntimeException('Error visitor : ' . json_encode($visit->getErrors()));
         }
     }
 }
